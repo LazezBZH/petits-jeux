@@ -15,12 +15,9 @@ spinBtn.onclick = function () {
   console.log(random1);
   console.log("Random:", random2);
   displayResult();
-  displayRedirect();
+
   function displayResult() {
     setTimeout(showResult, 5500);
-  }
-  function displayRedirect() {
-    timeoutRedirect = setTimeout(redirect, 8500);
   }
 
   function showResult() {
@@ -61,7 +58,7 @@ spinBtn.onclick = function () {
 
         break;
       default:
-        result.innerHTML = `<a href="/A.html">Cliquez pour être redirigé vers le jeu A ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/memory">Cliquez pour être redirigé vers le Memory ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
     }
   }
