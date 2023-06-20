@@ -10,12 +10,16 @@
 header {
   width: 100%;
   background-color: black;
-  /* position: absolute;
-  top: 0%; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 1rem;
   text-align: center;
   color: red;
   text-transform: uppercase;
+}
+header div {
+  flex: 1;
 }
 header h1 {
   font-size: 3rem;

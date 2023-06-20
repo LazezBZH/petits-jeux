@@ -334,3 +334,9 @@ window.onload = function () {
     play();
   }
 };
+
+let home = document.querySelector(".home-header");
+home.addEventListener("click", back);
+function back() {
+  document.location.href = "/";
+}

@@ -23,42 +23,42 @@ spinBtn.onclick = function () {
   function showResult() {
     switch (random2) {
       case 45:
-        result.innerHTML = `<a href="/H.html">Cliquez pour être redirigé vers le jeu H ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/H.html">Cliquez pour être redirigé vers le jeu H ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 90:
-        result.innerHTML = `<a href="/G.html">Cliquez pour être redirigé vers le jeu G ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/G.html">Cliquez pour être redirigé vers le jeu G ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 135:
-        result.innerHTML = `<a href="/F.html">Cliquez pour être redirigé vers le jeu F ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/F.html">Cliquez pour être redirigé vers le jeu F ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 180:
-        result.innerHTML = `<a href="/E.html">Cliquez pour être redirigé vers le jeu E ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/E.html">Cliquez pour être redirigé vers le jeu E ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 225:
-        result.innerHTML = `<a href="/D.html">Cliquez pour être redirigé vers le jeu D ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/D.html">Cliquez pour être redirigé vers le jeu D ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 270:
-        result.innerHTML = `<a href="/C.html">Cliquez pour être redirigé vers le jeu C ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/C.html">Cliquez pour être redirigé vers le jeu C ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 315:
-        result.innerHTML = `<a href="/pendu">Cliquez pour être redirigé vers le jeu B ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/pendu">Cliquez pour être redirigé vers le pendu ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       default:
-        result.innerHTML = `<a href="/memory">Cliquez pour être redirigé vers le Memory ou faites tourner à nouveau la roue. pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/memory">Cliquez pour être redirigé vers le Memory ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
     }
   }
