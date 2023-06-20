@@ -1,14 +1,14 @@
 body {
-  background-color: rgb(185, 116, 254);
+  background-color: rgba(0, 0, 0, 0.6);
   margin: 0;
 }
 header {
   width: 100%;
-  background-color: rgb(207, 166, 248);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
-  color: rgb(163, 1, 1);
+  color: red;
   font-size: 1rem;
   text-transform: uppercase;
   display: flex;
@@ -31,7 +31,7 @@ header #level-toggle {
   left: 50%;
   transform: translate(-50%, 0%);
   z-index: 1;
-  background-color: rebeccapurple;
+  background-color: black;
 }
 ul {
   width: 100%;
@@ -48,9 +48,9 @@ li {
   float: left;
   margin: 10px;
   list-style: none;
-  outline: solid;
-  width: 150px;
-  height: 150px;
+  outline: solid red;
+  width: 100px;
+  height: 100px;
 }
 
 img {
@@ -65,7 +65,7 @@ img {
   z-index: 0;
   width: 600px;
   height: 200px;
-  background-color: yellow;
+  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +75,7 @@ img {
   transition: 2s;
   font-size: 3rem;
   transform: translateX(150px) translateY(0px);
-  color: red;
+  color: black;
 }
 .buttons {
   height: 100%;
@@ -88,16 +88,19 @@ img {
   transform: translate(-120%);
 }
 button {
-  background-color: red;
+  background-color: black;
   color: white;
   padding: 0.5rem;
   border-radius: 5px;
+}
+.shown {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 @media (max-width: 800px) {
   #container {
     width: 400px;
-    height: 400px;
+    height: 900px;
   }
   li {
     width: 75px;
@@ -122,7 +125,7 @@ button {
   }
   #container {
     width: 300px;
-    height: 300px;
+    height: 900px;
   }
   li {
     width: 50px;

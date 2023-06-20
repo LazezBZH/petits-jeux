@@ -14,12 +14,12 @@ function back() {
   document.location.href = "/";
 }
 function hard() {
-  document.location.href = "/memoryHard";
+  document.location.href = "/memory";
 }
 
 // create img array and randomize
 let images = [];
-for (let i = 1; i < 9; i++) {
+for (let i = 1; i < 19; i++) {
   let img = "/assets/memory/" + i + ".png";
   images.push(img);
   images.push(img);
@@ -81,11 +81,11 @@ choices.forEach(function (choice) {
             });
           good++;
         }
-        if (good === 8) {
+        if (good === 18) {
           document.querySelector(".bravo").style.zIndex = "3";
           document.querySelector("#container").style.opacity = "0.5";
         }
-        if (good === 8 && screen.width >= 801) {
+        if (good === 18 && screen.width >= 801) {
           document.querySelector(".bravo-txt").style.transform =
             "rotate(-20deg) translateX(-120px) translateY(-70px)";
         }
