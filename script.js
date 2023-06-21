@@ -48,12 +48,12 @@ spinBtn.onclick = function () {
 
         break;
       case 270:
-        result.innerHTML = `<a href="/C.html">Cliquez pour être redirigé vers le jeu C ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/moustiques">Cliquez pour aller chasser les Moustiques ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
       case 315:
-        result.innerHTML = `<a href="/pendu">Cliquez pour être redirigé vers le pendu ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/pendu">Cliquez pour être redirigé vers le Pendu ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;

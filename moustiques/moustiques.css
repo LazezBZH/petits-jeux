@@ -1,0 +1,320 @@
+body {
+  counter-reset: touched;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+input {
+  position: fixed;
+  left: -10px;
+  top: -10px;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.container {
+  height: 100vh;
+  background-image: url("/assets/moutiques/bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  cursor: url("https://surlapage.fr/widget/cursors/17/1281113.gif"), crosshair;
+}
+
+.input-circle:checked {
+  counter-increment: touched;
+}
+
+.score {
+  position: fixed;
+  left: 45%;
+  top: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: solid 2px black;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.score:after {
+  content: counter(touched);
+}
+
+.input-circle ~ .mosquito {
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0, 0.43, 1, 0);
+  animation: move 18s infinite alternate;
+}
+.input-circle1:not(:checked) ~ .mosquito1,
+.input-circle2:not(:checked) ~ .mosquito2,
+.input-circle3:not(:checked) ~ .mosquito3,
+.input-circle4:not(:checked) ~ .mosquito4,
+.input-circle5:not(:checked) ~ .mosquito5,
+.input-circle6:not(:checked) ~ .mosquito6,
+.input-circle7:not(:checked) ~ .mosquito7,
+.input-circle8:not(:checked) ~ .mosquito8,
+.input-circle9:not(:checked) ~ .mosquito9,
+.input-circle10:not(:checked) ~ .mosquito10 {
+  opacity: 1;
+}
+
+.input-circle1:checked ~ .mosquito1 span,
+.input-circle2:checked ~ .mosquito2 span,
+.input-circle3:checked ~ .mosquito3 span,
+.input-circle4:checked ~ .mosquito4 span,
+.input-circle5:checked ~ .mosquito5 span,
+.input-circle6:checked ~ .mosquito6 span,
+.input-circle7:checked ~ .mosquito7 span,
+.input-circle8:checked ~ .mosquito8 span,
+.input-circle9:checked ~ .mosquito9 span,
+.input-circle10:checked ~ .mosquito10 span {
+  display: block;
+}
+
+.mosquito {
+  position: absolute;
+  left: 0;
+  cursor: url("https://surlapage.fr/widget/cursors/17/1281074.gif"), crosshair;
+}
+.mosquito > span {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  left: -250%;
+  bottom: -50%;
+  background-color: transparent;
+  width: 80px;
+  height: 30px;
+  padding: 10px;
+}
+.mosquito > span:before {
+  content: "\01F4A5";
+  font-size: 10rem;
+}
+
+.mosquito1 {
+  top: 50px;
+  animation-delay: -2s !important;
+  transform: scale(0.9);
+}
+.mosquito2 {
+  top: 100px;
+  animation-delay: -1s !important;
+  transform: scale(0.8);
+}
+.mosquito3 {
+  top: 200px;
+  animation-delay: -3s !important;
+  transform: scale(1.4);
+}
+
+.mosquito4 {
+  top: 50px;
+  animation-delay: -12s !important;
+  transform: scale(0.9);
+}
+.mosquito5 {
+  top: 100px;
+  animation-delay: -16s !important;
+  transform: scale(0.5);
+}
+.mosquito6 {
+  top: 200px;
+  animation-delay: -20s !important;
+  transform: scale(1.4);
+}
+.mosquito7 {
+  top: 250px;
+  animation-delay: -13s !important;
+  transform: scale(1.2);
+}
+
+.mosquito8 {
+  top: 150px;
+  animation-delay: -1s !important;
+  transform: scale(0.8);
+}
+.mosquito9 {
+  top: 120px;
+  animation-delay: -36s !important;
+  transform: scale(0.6);
+}
+.mosquito10 {
+  top: 230px;
+  animation-delay: -10s !important;
+  transform: scale(1.6);
+}
+
+@keyframes move {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 20%;
+    top: 50%;
+  }
+  40% {
+    top: 30%;
+    left: 60%;
+  }
+  60% {
+    top: 80%;
+    left: 80%;
+  }
+  80% {
+    top: 10%;
+    left: 20%;
+  }
+  100% {
+    top: 30%;
+    left: 20%;
+  }
+}
+
+.timer {
+  background-color: #f88011;
+  width: 300px;
+  height: 50px;
+  position: fixed;
+  top: 10%;
+}
+
+.timer span {
+  display: block;
+  background: repeating-linear-gradient(0.25turn, #f88011, #108632 20px),
+    repeating-linear-gradient(#108632, #f88011 40px),
+    repeating-linear-gradient(0.25turn, #f88011, #108632 20px);
+  width: 300px;
+  height: 50px;
+  animation: timer 30s linear;
+}
+
+.timer span:before {
+  content: "TEMPS RESTANT";
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 50px;
+  font-size: 25px;
+  color: #108632;
+}
+@keyframes timer {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 300px;
+    display: block;
+  }
+}
+
+.gameover {
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: gameover 30s linear forwards;
+  font-size: 80px;
+  color: #f88011;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gameover {
+  0% {
+    left: -5000px;
+    bottom: 100%;
+  }
+  97% {
+    left: -5000px;
+    bottom: 100%;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.mosquito {
+  color: white;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  text-align: center;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -10px;
+  width: 56px;
+  height: 70px;
+  z-index: 999;
+  background-image: url(/assets/moutiques/moustique2.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  gap: 0.5rem;
+  z-index: 100003;
+}
+.btns button {
+  background-color: #f88011;
+  color: #108632;
+  border: solid yellow 2px;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+@media (max-width: 1100px) {
+  .btns {
+    top: 80%;
+  }
+  .timer {
+    top: 80%;
+  }
+  .score {
+    top: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .btns {
+    top: 85%;
+  }
+  .timer {
+    top: 75%;
+  }
+  .score {
+    top: 88%;
+    left: 10px;
+    font-size: 0.9rem;
+  }
+  .gameover {
+    font-size: 50px;
+  }
+}
