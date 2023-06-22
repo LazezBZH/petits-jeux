@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+
+    <link rel="stylesheet" type="text/css" href="puzzle.css">
+</head>
+
+    <body onload="checkNavigator();">
+	<header>
+		<h1> Puzzle </h1>
+        <div class="btns">
+            <button id="reload">Recommencer</button>
+            <button id="home">Tourner la roue</button>
+        </div>
+	</header>
+    <section  class="bravo"><h2>BRAVO!</h2></section>
+	<section id="puzzle-container">
+		<div id="piece-containers" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+			<img id="piece3" src="/assets/puzzle/pieces/piece3.png" alt="piece3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece2" src="/assets/puzzle/pieces/piece2.png" alt="piece2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece4" src="/assets/puzzle/pieces/piece4.png" alt="piece4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece1" src="/assets/puzzle/pieces/piece1.png" alt="piece1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece5" src="/assets/puzzle/pieces/piece5.png" alt="piece5" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece6" src="/assets/puzzle/pieces/piece6.png" alt="piece6" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece7" src="/assets/puzzle/pieces/piece7.png" alt="piece7" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece8" src="/assets/puzzle/pieces/piece8.png" alt="piece8" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece9" src="/assets/puzzle/pieces/piece9.png" alt="piece9" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece10" src="/assets/puzzle/pieces/piece10.png" alt="piece10" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece11" src="/assets/puzzle/pieces/piece11.png" alt="piece11" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece12" src="/assets/puzzle/pieces/piece12.png" alt="piece12" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece13" src="/assets/puzzle/pieces/piece13.png" alt="piece13" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece14" src="/assets/puzzle/pieces/piece14.png" alt="piece14" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece15" src="/assets/puzzle/pieces/piece15.png" alt="piece15" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece16" src="/assets/puzzle/pieces/piece16.png" alt="piece16" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece17" src="/assets/puzzle/pieces/piece17.png" alt="piece17" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece18" src="/assets/puzzle/pieces/piece18.png" alt="piece18" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece19" src="/assets/puzzle/pieces/piece19.png" alt="piece19" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece20" src="/assets/puzzle/pieces/piece20.png" alt="piece20" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece21" src="/assets/puzzle/pieces/piece21.png" alt="piece21" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece22" src="/assets/puzzle/pieces/piece22.png" alt="piece22" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece23" src="/assets/puzzle/pieces/piece23.png" alt="piece23" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece24" src="/assets/puzzle/pieces/piece24.png" alt="piece24" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece25" src="/assets/puzzle/pieces/piece25.png" alt="piece25" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece26" src="/assets/puzzle/pieces/piece26.png" alt="piece26" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece27" src="/assets/puzzle/pieces/piece27.png" alt="piece27" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece28" src="/assets/puzzle/pieces/piece28.png" alt="piece28" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece29" src="/assets/puzzle/pieces/piece29.png" alt="piece29" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            <img id="piece30" src="/assets/puzzle/pieces/piece30.png" alt="piece30" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+		</div>
+		<div id="puzzle">
+			<div class="piece-container" id="01" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="06" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="11" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="16" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="21" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="26" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="02" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="07" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="12" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="17" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="22" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="27" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="03" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="08" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="13" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="18" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="23" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="28" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="04" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="09" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="14" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="19" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="24" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="29" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="05" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="10" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="15" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="20" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="piece-container" id="25" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+            <div class="piece-container" id="30" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+		</div>	
+	</section>
+
+    <script src="puzzle.js"></script>
+</body>
+</html>

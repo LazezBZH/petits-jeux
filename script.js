@@ -43,7 +43,7 @@ spinBtn.onclick = function () {
 
         break;
       case 225:
-        result.innerHTML = `<a href="/D.html">Cliquez pour être redirigé vers le jeu D ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
+        result.innerHTML = `<a href="/puzzle">Cliquez pour faire un puzzle ou faites tourner à nouveau la roue pour sélectionner un autre jeu</a>`;
         result.style.opacity = "1";
 
         break;
