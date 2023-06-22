@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swap</title>
+
+    <link rel="stylesheet" type="text/css" href="swap.css">
+</head>
+<body>
+    <header>
+        <h1>Reconstituez l'image</h1>
+        <button id="home">Tourner la roue</button>
+    </header>
+    <div  class="bravo "><h2>BRAVO!</h2></div>
+    <main>
+        <section class="btns">
+            <button id="reset"> Rafraîchir </button>
+            <button id="swapping"> Mélanger </button>
+        </section>
+        <section class="table">
+            <table>
+
+                <tr>
+                    <td id="box1" class="img1" onmousedown="swap(7);"></td>
+                    <td id="box2" class="img2" onmousedown="swap(8);"></td>
+                    <td id="box3" class="img3" onmousedown="swap(9);"></td>
+                </tr>
+
+                <tr>
+                    <td id="box4" class="img4" onmousedown="swap(10);"></td>
+                    <td id="box5" class="img5" onmousedown="swap(11);"></td>
+                    <td id="box6" class="img6" onmousedown="swap(12);"></td>
+                </tr>
+                
+                <tr>
+                    <td id="box7" class="img7" onmousedown="swap(13);"></td>
+                    <td id="box8" class="img8" onmousedown="swap(14);"></td>
+                    <td id="box9" class="img9" onmousedown="swap(15);"></td>
+                </tr>
+
+            </table>
+
+        </section>
+        <section class="swapBtn">
+            <ul> 
+                <h2>Cliquez sur les cases de l'image pour les remettre en ordre et/ou sur les boutons ci-dessous</h2>
+                <li>
+                    <button id="btn1"  onclick="swap(1);">Permuter les lignes 1 et 2</button>
+                </li>
+                <li>
+                    <button id="btn2" onclick="swap(2);">Permuter les lignes 1 et 3</button>
+                </li>
+                <li>
+                    <button id="btn3" onclick="swap(3);">Permuter les lignes 2 et 3</button>
+                </li>
+                <li>
+                    <button id="btn4" onclick="swap(4);">Permuter les colonnes 1 et 2</button>
+                </li>
+                <li>
+                    <button id="btn5" onclick="swap(5);">Permuter les colonnes 1 et 3</button>
+                </li>
+                <li>
+                    <button id="btn6" onclick="swap(6);">Permuter les colonnes 2 et 3</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    
+
+
+    <script src="swap.js"></script>
+</body>
+</html>

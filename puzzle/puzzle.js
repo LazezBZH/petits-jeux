@@ -1,5 +1,7 @@
-// puzzle
 let bravo = document.querySelector(".bravo");
+
+// puzzle
+
 function start(e) {
   e.dataTransfer.effecAllowed = "move";
   e.dataTransfer.setData("Text", e.target.id);
@@ -147,3 +149,13 @@ function back() {
 function reload() {
   window.location.reload();
 }
+
+// drag event
+let images = document.querySelectorAll("img");
+
+images.forEach((image) => {
+  image.addEventListener("dragstart", start);
+});
+images.forEach((image) => {
+  image.addEventListener("dragend", end);
+});
