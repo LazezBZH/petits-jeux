@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+
+    <link rel="stylesheet" type="text/css" href="quizz.css">
+</head>
+
+
+<body >
+<header> 
+        <button class="reload-header">Recommencer</button>
+        <h1> Quizz</h1>
+        <button class="home-header">Tourner la roue</button>
+    </header>
+    <div class="end">
+        <h2 id="end-txt"></h2>
+        <div class="buttons">
+            <button class="reload">Recommencer</button>
+            <button class="home">Jouer à un autre jeu</button>
+        </div>
+    </div>
+    <div class="start">
+        <button class="start-btn">Démarrer</button>
+    </div>
+<main>
+  <section>
+    <table >
+
+    <thead> 
+      <tr>
+        <th colspan="4">Testez vos connaissances sur 25 questions.</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="quest-txt"><span class="quest-title">Question:</span> <span id="prog">01</span> /25</th>
+        <td><p id="question"></p></td>
+       
+      </tr>
+
+      <tr class="propositions">
+        <th>Propositions</th>
+        <td ><div id="propositions"></div></td>
+        
+    
+      </tr>
+
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td></td>
+        <th class="inputs" colspan="3">
+          <button  class="input" onclick="tester('a')">A</button>    <button class="input" onclick="tester('b')">B</button>    <button class="input" onclick="tester('c')">C</button>    <button class="input" onclick="tester('d')">D</button>
+        </th>           
+      </tr>    
+    </tfoot>
+
+  </table>
+
+  <div class="results">
+    <div class="score">
+        <p>Points: <span id="points">0</span></p>
+      <p >Temps restant: <span id="time">0</span></p>
+    </div>
+    
+  </div>
+  <div class="result"><div id="correction"></div><button id="next-question">Question suivante</button></div>
+  </section>
+
+
+</main>
+
+<script src="quizz.js"></script>
+</body>
+</html>

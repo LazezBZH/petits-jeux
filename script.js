@@ -33,7 +33,7 @@ spinBtn.onclick = function () {
 
         break;
       case 135:
-        result.innerHTML = `<a href="/F.html">Cliquez pour être redirigé vers le jeu F ou faites tourner à nouveau la roue pour sélectionner un autre jeu.</a>`;
+        result.innerHTML = `<a href="/quizz">Cliquez pour être redirigé vers le quizz ou faites tourner à nouveau la roue pour sélectionner un autre jeu.</a>`;
         result.style.opacity = "1";
 
         break;
