@@ -1,8 +1,8 @@
 // let progression = Math.floor(50 * Math.random());
 // console.log(progression);
 let score = 0;
-let pp = 1; //compte le nombre de questions
-let sec = 360;
+let pp = 0; //compte le nombre de questions
+let sec = 300;
 let points = document.getElementById("points");
 let prog = document.getElementById("prog");
 let reloadBtn = document.querySelector(".reload");
@@ -85,7 +85,7 @@ let suggestions = [
   "<p> 250°C</p><p> 510°C</p><p> 100°C</p><p> 460°C</p>",
   "<p> Michael Jackson</p><p> Prince</p><p> Eddy Mitchell</p><p> Daniel Balavoine</p>", //10
   "<p> Vincent van Gogh</p><p> Édouard Manet</p><p> Claude Monet</p><p> Léonard de Vinci</p>",
-  "<p> italienne</p><p> Belge</p><p> Portugaise</p><p> Française</p>",
+  "<p> Italienne</p><p> Belge</p><p> Portugaise</p><p> Française</p>",
   "<p> Corée du Nord</p><p> Japon</p><p> Chine</p><p> Inde</p>",
   "<p> Liban</p><p> Serbie</p><p> Koweït</p><p> France</p>",
   "<p> 1206</p><p> 1503</p><p> 805</p><p> 1714</p>", //15
@@ -202,6 +202,12 @@ function start() {
 }
 
 function displayQuestions() {
+  let pP = pp + 1;
+  if (pp < 9) {
+    prog.innerHTML = "0" + pP;
+  } else {
+    prog.innerHTML = pP;
+  }
   correction.innerHTML = "";
   answerBtn.forEach((answerButton) => (answerButton.disabled = false));
   nextQuestion.disabled = true;
@@ -222,93 +228,129 @@ function tester(answer) {
   nextQuestion.disabled = false;
   let answ = answer;
   console.log("index", ind, "réponse", answ, responses[ind], "bonne réponse");
-  let pP = pp + 1;
-  if (pp < 9) {
-    prog.innerHTML = "0" + pP;
-  } else {
-    prog.innerHTML = pP;
-  }
+
   console.log(pp);
-  if (pp > 24) {
-    if (answ === responses[ind]) {
-      score += 25;
-      pp++;
-      points.innerHTML = score;
-    }
-    if (answ != responses[ind]) {
-      console.log("non");
-      score -= 25;
-      pp++;
-      points.innerHTML = score;
-    }
-    end.style.zIndex = "99";
-    if (score <= 50 && score != -625) {
-      endTxt.innerHTML +=
-        "Votre score est de " +
-        score +
-        " . Pas terrible, ça ira mieux la prochaine fois!";
-    }
-    if (score > 50 && score < 300) {
-      endTxt.innerHTML +=
-        "Votre score est de " + score + " . Presque la moyenne, continuez!";
-    }
-    if (score >= 300 && score < 500) {
-      endTxt.innerHTML +=
-        "Votre score est de " +
-        score +
-        " . Pas mauvais, mais je suis sûre que vous pouvez mieux faire!";
-    }
-    if (score >= 500 && score != 625) {
-      endTxt.innerHTML +=
-        "Votre score est de " +
-        score +
-        " . Pas mal du tout, envie d'une autre partie?";
-    }
-    if (score == 625) {
-      endTxt.innerHTML +=
-        "Votre score est de " +
-        score +
-        " . Excellent, c'est un sans fautes! BRAVO!";
-    }
-    if (score == -625) {
-      endTxt.innerHTML +=
-        "Votre score est de " +
-        score +
-        " . Outch, aucune bonne réponse! Perséverez!";
-    }
-  } else {
-    if (answ === responses[ind]) {
-      score += 25;
-      pp++;
-      points.innerHTML = score;
-      correction.innerHTML +=
-        "Bravo! '" + responses[ind].toUpperCase() + "' était la bonne réponse.";
-    }
-    if (answ != responses[ind]) {
-      score -= 25;
-      pp++;
-      points.innerHTML = score;
-      console.log(responses[ind]);
-      switch (responses[ind]) {
-        case "a":
-          correction.innerHTML +=
-            "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
-          break;
-        case "b":
-          correction.innerHTML +=
-            "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
-          break;
-        case "c":
-          correction.innerHTML +=
-            "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
-          break;
-        default:
-          correction.innerHTML +=
-            "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+
+  function showResult() {
+    if (pp == 24) {
+      nextQuestion.disabled = true;
+      if (answ === responses[ind]) {
+        score += 25;
+        pp++;
+        points.innerHTML = score;
+        correction.innerHTML +=
+          "Bravo! '" +
+          responses[ind].toUpperCase() +
+          "' était la bonne réponse.";
+      }
+      if (answ != responses[ind]) {
+        score -= 25;
+        pp++;
+        points.innerHTML = score;
+        console.log(responses[ind]);
+        switch (responses[ind]) {
+          case "a":
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+            break;
+          case "b":
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+            break;
+          case "c":
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+            break;
+          default:
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+        }
+      }
+      function showGlobalResult() {
+        if (answ === responses[ind]) {
+          score += 25;
+          pp++;
+          points.innerHTML = score;
+        }
+        if (answ != responses[ind]) {
+          console.log("non");
+          score -= 25;
+          pp++;
+          points.innerHTML = score;
+        }
+        end.style.zIndex = "99";
+        if (score <= 50 && score != -625) {
+          endTxt.innerHTML +=
+            "Votre score est de " +
+            score +
+            " . Pas terrible, ça ira mieux la prochaine fois!";
+        }
+        if (score > 50 && score < 300) {
+          endTxt.innerHTML +=
+            "Votre score est de " + score + " . Presque la moyenne, continuez!";
+        }
+        if (score >= 300 && score < 500) {
+          endTxt.innerHTML +=
+            "Votre score est de " +
+            score +
+            " . Pas mauvais, mais je suis sûre que vous pouvez mieux faire!";
+        }
+        if (score >= 500 && score != 625) {
+          endTxt.innerHTML +=
+            "Votre score est de " +
+            score +
+            " . Pas mal du tout, envie d'une autre partie?";
+        }
+        if (score == 625) {
+          endTxt.innerHTML +=
+            "Votre score est de " +
+            score +
+            " . Excellent, c'est un sans fautes! BRAVO!";
+        }
+        if (score == -625) {
+          endTxt.innerHTML +=
+            "Votre score est de " +
+            score +
+            " . Outch, aucune bonne réponse! Perséverez!";
+        }
+      }
+      setTimeout(showGlobalResult, 1200);
+    } else {
+      if (answ === responses[ind]) {
+        score += 25;
+        pp++;
+        points.innerHTML = score;
+        correction.innerHTML +=
+          "Bravo! '" +
+          responses[ind].toUpperCase() +
+          "' était la bonne réponse.";
+      }
+      if (answ != responses[ind]) {
+        score -= 25;
+        pp++;
+        points.innerHTML = score;
+        console.log(responses[ind]);
+        switch (responses[ind]) {
+          case "a":
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+            break;
+          case "b":
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+            break;
+          case "c":
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+            break;
+          default:
+            correction.innerHTML +=
+              "La bonne réponse était: '" + responses[ind].toUpperCase() + "'";
+        }
       }
     }
-    // displayQuestions();
   }
+  setTimeout(showResult, 100);
 }
 function time() {
   sec--;
