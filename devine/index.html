@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devine</title>
+
+    <link rel="stylesheet" type="text/css" href="devine.css">
+</head>
+<body>
+    <header>
+        <h1>Devinez le nombre choisi aléatoirement par l'ordinateur</h1>
+        <button id="home">Tourner la roue</button>
+    </header>
+    <main>
+      
+    <p id="message">Bonne chance!</p>
+    <form id="form">
+        <label for="number">Entrez un nombre entre 1 et 1000:</label>
+        <input min="1" max="1000" type="number" id="number" >
+        <button disabled id="form-btn" type="submit">Vérifier</button>
+    </form>
+    <button disabled id="play-again">Rejouer</button>
+    </main>
+    
+<script type="module" src="devine.js"></script>
+</body>
+</html>

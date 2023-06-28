@@ -28,7 +28,7 @@ spinBtn.onclick = function () {
 
         break;
       case 90:
-        result.innerHTML = `<a href="/G.html">Cliquez pour être redirigé vers le jeu G ou faites tourner à nouveau la roue pour sélectionner un autre jeu.</a>`;
+        result.innerHTML = `<a href="/devine">Cliquez pour être devinez un nombre ou faites tourner à nouveau la roue pour sélectionner un autre jeu.</a>`;
         result.style.opacity = "1";
 
         break;
