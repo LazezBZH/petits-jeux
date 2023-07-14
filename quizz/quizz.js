@@ -92,7 +92,7 @@ let suggestions = [
   "<p> 16 x 16</p><p> 20 x 20</p><p>  15 x 15</p><p> 12 x12</p>",
   "<p> Lénine</p><p> Staline</p><p> Troski</p><p> Molotov</p>",
   "<p> Attila</p><p> Auguste</p><p> Vercingétorix</p><p> César</p>",
-  "<p> L'Allemangne</p><p> L'Argentine</p><p> La France</p><p> Le Portugal</p>",
+  "<p> L'Allemagne</p><p> L'Argentine</p><p> La France</p><p> Le Portugal</p>",
   "<p> Venise</p><p> Vérone</p><p> Milan</p><p> Rome</p>", //20
   "<p>Asie </p><p>Europe</p><p>Afrique</p><p>Amérique du Sud </p>",
   "<p>Pomme </p><p>Ananas </p><p>Fraise </p><p>Kiwi </p>",

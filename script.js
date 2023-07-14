@@ -23,7 +23,7 @@ spinBtn.onclick = function () {
   function showResult() {
     switch (random2) {
       case 45:
-        result.innerHTML = `<a href="/H.html">Cliquez pour être redirigé vers le jeu H ou faites tourner à nouveau la roue pour sélectionner un autre jeu.</a>`;
+        result.innerHTML = `<a href="/des">Cliquez pour jouer aux dés ou faites tourner à nouveau la roue pour sélectionner un autre jeu.</a>`;
         result.style.opacity = "1";
 
         break;
@@ -73,3 +73,23 @@ spinBtn.onclick = function () {
 // 225: D
 // 270: C
 // 315: B
+
+// menu burger
+
+const menuLinks = document.querySelectorAll(".menu a");
+const trigger = document.querySelector(".trigger");
+const menu = document.querySelector(".menu");
+const dropDown = document.querySelector(".drop-down");
+
+menuLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    menu.classList.toggle("round");
+    dropDown.classList.toggle("down");
+  });
+});
+document.addEventListener("mouseup", function (event) {
+  if (!dropDown.contains(event.target) && !trigger.contains(event.target)) {
+    menu.classList.remove("round");
+    dropDown.classList.remove("down");
+  }
+});

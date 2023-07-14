@@ -161,6 +161,15 @@ header {
   color: red;
 }
 
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 1.8rem;
+    text-align: right;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
 @media (max-width: 450px) {
   .container {
     width: 280px;
@@ -173,93 +182,190 @@ header {
 }
 
 /* burger */
-@keyframes checked-anim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.menu li,
-.menu li a {
-  margin: 75px 0 -55px 0;
-  color: red;
-  font-size: 14pt;
-  font-weight: 700;
-  line-height: 1.8;
-  text-decoration: none;
-  text-transform: none;
-  list-style: none;
-  outline: 0;
-  display: block;
-  height: 2rem;
-}
-.menu li {
-  width: 230px;
-  text-indent: 56px;
-}
-.menu a:focus {
-  display: block;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: all 0.5s;
-}
 
-#trigger,
-#burger {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  background: #f7c100;
-  width: 5rem;
-  height: 2px;
-  transition: 0.2s ease;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 5px;
-}
-#trigger {
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-}
-#burger:before {
-  content: " ";
-  top: 10px;
-  left: 0;
-}
-#burger:after {
-  content: " ";
-  top: 20px;
-  left: 0;
-}
-
-#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
+nav ul,
+nav li {
   margin: 0;
   padding: 0;
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  opacity: 0;
-  /* animation: not-checked-anim 500ms both;
-  transition: 500ms; */
+  list-style: none;
+  max-width: 50%;
+  margin-left: 4rem;
 }
-#menu-toggle:checked + #trigger + #burger + #menu {
-  animation: checked-anim 500ms ease both;
+
+.drop-down {
+  padding: 25px;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: black;
+  z-index: 999;
+  top: -100%;
+  transition: top 0.4s ease-in-out;
 }
-/* #menu-toggle:checked + #trigger ~ #menu > li,
-a {
+
+.drop-down li {
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+}
+
+.drop-down a {
   display: block;
-} */
-/* [type="checkbox"]:not(:checked), */
-/* [type="checkbox"]:checked {
-  display: none;
-} */
+  font-size: 1.5rem;
+  color: red;
+  text-decoration: none;
+}
+
+.down {
+  top: 0;
+  transition: top 0.4s ease-in-out;
+}
+
+.menu {
+  box-sizing: content-box !important;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  z-index: 999;
+}
+
+.drop-down li a:hover {
+  /* color: yellow; */
+  animation: clign 0.5s ease-in-out forwards infinite;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0 auto;
+  color: red;
+}
+
+.trigger {
+  animation: menu-spin-back 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.round .trigger {
+  animation: menu-spin 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  color: yellow;
+}
+
+@-webkit-keyframes menu-spin {
+  50% {
+    border-radius: 100%;
+  }
+  100% {
+    border-radius: 100%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes menu-spin {
+  50% {
+    border-radius: 100%;
+  }
+  100% {
+    border-radius: 100%;
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes menu-spin-back {
+  20% {
+    color: red;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: red;
+  }
+  97% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+    transform: rotate(360deg);
+  }
+}
+@keyframes menu-spin-back {
+  20% {
+    color: red;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: red;
+  }
+  97% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+    transform: rotate(360deg);
+  }
+}
+@keyframes menu-spin-back {
+  20% {
+    color: red;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: red;
+  }
+  97% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes clign {
+  0% {
+    color: red;
+    font-weight: normal;
+  }
+
+  20% {
+    color: yellow;
+    font-weight: bold;
+  }
+  80% {
+    color: yellow;
+    font-weight: bold;
+  }
+  100% {
+    color: red;
+    font-weight: normal;
+  }
+}
+@keyframes clign {
+  0% {
+    color: red;
+    font-weight: normal;
+  }
+
+  20% {
+    color: yellow;
+    font-weight: bold;
+  }
+  80% {
+    color: yellow;
+    font-weight: bold;
+  }
+  100% {
+    color: red;
+    font-weight: normal;
+  }
+}

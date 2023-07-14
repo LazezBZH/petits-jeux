@@ -215,7 +215,7 @@ button {
   border: none;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .start-btn {
     font-size: 3rem;
     padding: 2rem;
@@ -250,7 +250,7 @@ button {
     padding: 2rem 0;
   }
 }
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
   .start-btn {
     font-size: 2rem;
     padding: 1rem;
@@ -264,7 +264,7 @@ button {
     padding: 0.1rem;
   }
 }
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .start-btn {
     font-size: 2rem;
     padding: 1rem;
