@@ -101,8 +101,9 @@ function launch() {
 
   setTimeout(() => {
     yourScore.style.opacity = 1;
-
-    if (total > 12) {
+    if (total === 12) {
+      stopBtn.style.opacity = 0;
+    } else if (total > 12) {
       yourScore.innerHTML = `Votre score est de: <span class="number">${total}</span> vous avez perdu!`;
       stopBtn.style.opacity = 0;
     } else {
@@ -114,11 +115,12 @@ function launch() {
   console.log(resultat);
   total += resultat;
   launched.innerHTML += `<li><img src="/assets/des/${resultat}.png" /></li>`;
-  if (total > 12) {
+  if (total >= 12) {
     // alert(
     //   "votre total est de " + total + " vous avez dépassé 12 et donc perdu!"
     // );
     // stopBtn.style.opacity = 0;
+
     stop();
   }
 }

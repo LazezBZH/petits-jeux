@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: gray;
   background-image: url(/assets/des/des.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,6 +18,7 @@ body {
 button {
   cursor: pointer;
   z-index: 99;
+  box-shadow: 3px 2px 2px red;
 }
 main {
   width: auto;
@@ -208,7 +210,8 @@ header button {
 .number-final {
   font-size: 1.4rem;
   border: solid 2px red;
-  padding: 0 2px;
+  padding: 0 3px;
+  box-shadow: 3px 2px 2px red;
 }
 /* responsive */
 @media screen and (max-width: 1500px) {
