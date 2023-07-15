@@ -75,7 +75,7 @@ let questions = [
 
 let suggestions = [
   "<p> 1925</p><p> 1912</p><p> 1932</p><p> 1908</p>", //1
-  "<p> 100.000</p><p> 7800</p><p> 20.000</p><p> 220.000</p>",
+  "<p> 100.000</p><p> 7.800</p><p> 20.000</p><p> 220.000</p>",
   "<p> 2 mois</p><p> 1 an</p><p> 6 jours</p><p> 24 heures</p>",
   "<p> Pierre Durand</p><p> Nicolas Appert</p><p> Louis Pasteur</p><p> Charles Ingalls</p>",
   "<p> Elisabeth 2</p><p> John Major</p><p> David Beckham</p><p> Jessica Rowling</p>", //5
@@ -235,7 +235,6 @@ function tester(answer) {
     if (pp == 24) {
       nextQuestion.disabled = true;
       if (answ === responses[ind]) {
-        score += 25;
         pp++;
         points.innerHTML = score;
         correction.innerHTML +=
@@ -244,7 +243,6 @@ function tester(answer) {
           "' était la bonne réponse.";
       }
       if (answ != responses[ind]) {
-        score -= 25;
         pp++;
         points.innerHTML = score;
         console.log(responses[ind]);
@@ -274,12 +272,12 @@ function tester(answer) {
         }
         if (answ != responses[ind]) {
           console.log("non");
-          score -= 25;
+          score -= 20;
           pp++;
           points.innerHTML = score;
         }
         end.style.zIndex = "99";
-        if (score <= 50 && score != -625) {
+        if (score <= 50 && score != -500) {
           endTxt.innerHTML +=
             "Votre score est de " +
             score +
@@ -307,7 +305,7 @@ function tester(answer) {
             score +
             " . Excellent, c'est un sans fautes! BRAVO!";
         }
-        if (score == -625) {
+        if (score == -500) {
           endTxt.innerHTML +=
             "Votre score est de " +
             score +
@@ -326,7 +324,7 @@ function tester(answer) {
           "' était la bonne réponse.";
       }
       if (answ != responses[ind]) {
-        score -= 25;
+        score -= 20;
         pp++;
         points.innerHTML = score;
         console.log(responses[ind]);
@@ -349,6 +347,7 @@ function tester(answer) {
         }
       }
     }
+    console.log(pp, score);
   }
   setTimeout(showResult, 100);
 }
@@ -361,7 +360,7 @@ function time() {
   }
   if (sec == 0) {
     end.style.zIndex = "99";
-    if (score <= 50 && score != -625) {
+    if (score <= 50 && score != -500) {
       endTxt.innerHTML +=
         "Votre score est de " +
         score +
@@ -389,7 +388,7 @@ function time() {
         score +
         " . Excellent, c'est un sans fautes! BRAVO!";
     }
-    if (score == -625) {
+    if (score == -500) {
       endTxt.innerHTML +=
         "Votre score est de " +
         score +
