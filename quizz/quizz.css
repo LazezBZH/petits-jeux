@@ -20,6 +20,9 @@ header {
   padding: 2rem;
   z-index: 10;
 }
+header p {
+  text-transform: none;
+}
 header .reload-header {
   position: absolute;
   right: 20px;
