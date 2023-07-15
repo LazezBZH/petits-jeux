@@ -15,38 +15,40 @@
         <button class="home-header">Tourner la roue</button>
     </header>
     <main>
-        <div>
-        <button id="start">Démarrer</button>
-    <button id="reset" >Rejouer</button>
-
-    <div class="comput">
-        <div id="comput-msg"><h2>L'ordinateur a lancé 2 dés, à votre tour!</h2></div>
-        <ul id="computLaunched"></ul>
-        <!-- <p>Le score de l'ordi est: <span id="comput-score"></span></p> -->
-    </div>
-    </div>
-    <div>
-        <div class="btn">
-              <button id="launch" >Lancer</button>
-    <button id="stop" >Arrêter</button>
-        </div>
-  
- 
-
-    <h2 id="title">Vos lancers:</h2>
-    <div class="you">
-        <ul id="launched"></ul>
-    </div>
-    </div>
-    <div>
-        <p id="your-score"></p>
-    <p id="result-score">Résultat de cette partie: Ordi <span id="comput-score"></span> / Vous <span id="part-score"></span></p>
-    </div>
-    <div id="final-score">Toutes les parties: 
-        <div>Ordi <span id="comput-count"></span></div> 
-        <div> Vous <span id="your-count" ></span> </div>
-        <div>Égalité <span id="tie-count"></span></div> 
-    </div>
+        <section class="section-1">
+            <button id="start">Démarrer</button>
+            <button id="reset" >Rejouer</button>
+            <div class="comput" id="comput-msg">
+                
+                    <h2 id="comput-h2">L'ordinateur a lancé 2 dés, à votre tour!</h2>
+                    <ul id="computLaunched">
+                       
+                    </ul>
+              
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="btn">
+                <button id="launch" >Lancer</button>
+                <button id="stop" >Arrêter</button>
+            </div>
+            <h2 id="title">Vos lancers:</h2>
+            <div class="you">
+                <ul id="launched"></ul>
+            </div>
+        </section>
+        <section class="section-3">
+            <p id="your-score"></p>
+            <p id="result-score">Résultat de cette partie: Ordi <span id="comput-score" class="number"></span> / Vous <span id="part-score" class="number"></span></p>
+        </section>
+        <section class="section-4" id="final-score">
+            <div>Toutes les parties: </div>
+            <div class="section-4_score">
+                <div>Ordi <span id="comput-count"  class="number-final"></span></div> 
+            <div> Vous <span id="your-count"  class="number-final"></span> </div>
+            <div>Égalité <span id="tie-count"  class="number-final"></span></div> 
+            </div>
+        </section>
     </main>
  
     
