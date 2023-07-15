@@ -70,6 +70,7 @@ function stop() {
     yourCountNum++;
     yourScore.innerHTML = `Votre score est de <span class="number">${total}</span> vous avez gagné!`;
   } else {
+    tieCountNum++;
     yourScore.innerHTML = `Votre score est de <span class="number">${total}</span> égalité!`;
   }
   computCount.innerHTML = computCountNum;
