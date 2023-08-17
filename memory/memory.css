@@ -64,22 +64,22 @@ img {
 }
 .bravo {
   position: absolute;
-  top: 50%;
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
   width: 600px;
-  height: 200px;
+  height: 180px;
   background-color: yellow;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-radius: 5px;
 }
 .bravo h2 {
   transition: 2s;
   font-size: 3rem;
-  transform: translateX(150px) translateY(0px);
+  transform: translateX(70%) translateY(0px);
   color: red;
 }
 .buttons {

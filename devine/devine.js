@@ -21,6 +21,7 @@ function checkNumber(number) {
   if (number === randomNumber) {
     found = true;
     numberInput.value = "";
+    numberInput.disabled = true;
     submitBtn.disabled = true;
     playAgain.disabled = false;
     if (attempts === 1) {
@@ -37,6 +38,7 @@ function checkNumber(number) {
 function resetGame() {
   submitBtn.disabled = true;
   playAgain.disabled = true;
+  numberInput.disabled = false;
   attempts = 0;
   found = false;
   message.innerHTML = "Bonne chance!";
