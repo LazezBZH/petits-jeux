@@ -117,11 +117,6 @@ function launch() {
   total += resultat;
   launched.innerHTML += `<li><img src="/assets/des/${resultat}.png" /></li>`;
   if (total >= 12) {
-    // alert(
-    //   "votre total est de " + total + " vous avez dépassé 12 et donc perdu!"
-    // );
-    // stopBtn.style.opacity = 0;
-
     stop();
   }
 }

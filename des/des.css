@@ -22,23 +22,19 @@ button {
 }
 main {
   width: auto;
-  /* margin: 0; */
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  bottom: 50%;
+  position: fixed;
+  top: 190px;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translateX(-50%);
 }
 section {
   width: 300px;
   padding: 0.5rem;
 }
 .section-1 {
-  /* position: absolute; */
-  /* background-color: grey; */
   color: yellow;
   border-radius: 10px;
 }
@@ -48,7 +44,6 @@ section {
   border-bottom-right-radius: 0;
 }
 .section-2 {
-  /* background-color: black; */
   color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -58,14 +53,12 @@ section {
   border-bottom-right-radius: 0;
 }
 .section-3 {
-  /* background-color: red; */
   height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  /* position: relative; */
 }
 .section-3_2 {
   border-bottom-left-radius: 0;
@@ -76,7 +69,6 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  /* background-color: black; */
   color: red;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -105,15 +97,10 @@ img {
 }
 #computLaunched {
   opacity: 0;
-  /* width: 110px;
-  margin: auto; */
-  /* z-index: -1; */
   display: flex;
   justify-content: center;
-  /* margin-top: 30px; */
   position: absolute;
   bottom: 10%;
-  /* transform: translateY(-50%); */
 }
 #launched {
   position: absolute;
@@ -128,12 +115,7 @@ img {
 .comput {
   margin-top: 1rem;
 }
-/* .comput-msg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: transparent;
-} */
+
 #your-score,
 #title,
 #result-score,
@@ -145,16 +127,9 @@ img {
 }
 
 #comput-msg h2 {
-  /* width: 80%; */
   text-align: center;
 }
-/* #result-score {
-  position: absolute;
-  bottom: 10px;
-} */
-/* #stop {
-  transition: opacity 2s;
-} */
+
 #reset {
   display: none;
 }
@@ -162,10 +137,6 @@ img {
   display: block;
   width: 250px;
   height: 150px;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   border-radius: 10px;
   font-size: 2rem;
 }
@@ -214,28 +185,9 @@ header button {
   box-shadow: 3px 2px 2px red;
 }
 /* responsive */
-@media screen and (max-width: 1500px) {
-  main {
-    bottom: 30%;
-  }
-}
+
 @media screen and (max-width: 800px) {
-  main {
-    bottom: 40%;
-  }
   h1 {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 420px) {
-  main {
-    bottom: 13%;
-  }
-}
-@media screen and (max-width: 320px) {
-  main {
-    bottom: 0%;
-  }
-}
-/* @media screen and (max-width: 320px) {
-} */
