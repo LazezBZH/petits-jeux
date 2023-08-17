@@ -5,11 +5,7 @@
 body {
   background-color: rgb(153, 212, 243);
   padding: 0;
-  background-image: url(/assets/devine/bg.png);
-  background-position: 100% -80%;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: 30%;
+  min-height: 100vh;
 }
 header {
   text-transform: uppercase;
@@ -17,7 +13,18 @@ header {
   background-color: rgb(2, 112, 202);
   padding: 2rem;
 }
+aside {
+  width: 20vw;
 
+  background-image: url(/assets/devine/bg.png);
+  position: absolute;
+  right: 5vw;
+  bottom: 300px;
+  z-index: -1;
+}
+aside img {
+  width: 100%;
+}
 #home {
   position: absolute;
   right: 10px;
@@ -66,6 +73,7 @@ button {
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 6px -3px rgb(2, 112, 202);
+  z-index: 99;
 }
 button:disabled {
   opacity: 0.5;
@@ -93,15 +101,16 @@ button:disabled {
     position: inherit;
   }
 }
-@media screen and (max-width: 1000px) {
-  body {
-    background-color: rgb(153, 212, 243);
-    padding: 0;
+@media screen and (max-width: 700px) {
+  aside {
+    width: 50vw;
+    height: 50vw;
+
     background-image: url(/assets/devine/bg.png);
-    background-position: 0% -50%;
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: 0%;
+    position: absolute;
+    right: 60%;
+    transform: translateX(50%);
+    bottom: 0;
   }
 }
 @media screen and (max-width: 500px) {

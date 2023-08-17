@@ -44,14 +44,12 @@ function resetGame() {
   randomNumber = Math.floor(Math.random() * 1000) + 1;
 }
 
-// const number = parseInt(document.getElementById("number").value);
 numberInput.addEventListener("keyup", checkValidity);
 function checkValidity(e) {
   e.preventDefault;
   console.log(numberInput.value);
   if (numberInput.value < 1 || numberInput.value > 1000)
     submitBtn.disabled = true;
-  //   if (numberInput.value >= 1 || numberInput.value < 1001)
   else submitBtn.disabled = false;
 }
 
