@@ -11,8 +11,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 105vh;
   position: relative;
+  min-height: 400px;
 }
 button {
   cursor: pointer;
@@ -189,7 +189,7 @@ header button {
   h1 {
     font-size: 1rem;
   }
-  body {
+  /* body {
     min-height: 130vh;
-  }
+  } */
 }
